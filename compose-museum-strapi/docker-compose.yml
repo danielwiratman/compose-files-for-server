@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  nginx:
+    container_name: museum-strapi
+    image: danielw77/docker_strapi
+    ports:
+      - "1337:1337"
+    restart: unless-stopped
+    volumes:
+      - museum-strapi:/srv/app
+
+volumes:
+    museum-strapi:
